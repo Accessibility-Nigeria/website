@@ -1,2 +1,2 @@
 # website
-All things related to the A11y Ng websit
+All things related to the A11y Ng website
