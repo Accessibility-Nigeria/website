@@ -1,12 +1,6 @@
 <template>
-  <div class="py-10">
-    <div class="relative rounded-xl overflow-hidden min-h-[400px] flex items-center justify-center bg-gray-100 mb-12">
-      <img src="~/assets/images/homepage-hero-image.jpg" alt="Hero" class="absolute inset-0 w-full h-full object-cover" />
-      <div class="relative z-10 text-center text-white p-6 bg-black/30 w-full h-full flex flex-col items-center justify-center">
-        <h1 class="text-4xl md:text-6xl font-bold mb-4">Empowering Everyone</h1>
-        <p class="text-xl md:text-2xl">Building a more accessible future together.</p>
-      </div>
-    </div>
+  <div>
+    <HomepageHero />
 
     <!-- Style Guide Verification -->
     <UContainer>

@@ -5,6 +5,7 @@
   --font-sans: "Libre Franklin", "sans-serif";
   --font-heading: "PT Sans", "sans-serif";
   --color-white: #FAFAFA;
+  --color-gray: #DADADA;
   --color-primary: #005C3D;
   --color-primary-dark: #00462e;
   --color-body: #433F3E;
@@ -15,9 +16,10 @@
   --ui-bg: var(--color-white);
   --ui-primary: var(--color-primary);
   --ui-text: var(--color-body);
+  --ui-header-height: --spacing(32.5);
 }
 
-@layer components {
+@layer base {
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
     font-weight: bold;
@@ -29,6 +31,10 @@
   h4 { font-size: 32px; line-height: 40px; }
   h5 { font-size: 24px; line-height: 32px; }
   h6 { font-size: 20px; line-height: 28px; }
+
+  .dark body {
+    color: var(--color-gray);
+  }
 }
 
 @layer utilities {

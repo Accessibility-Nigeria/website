@@ -1,6 +1,8 @@
 <template>
-  <UContainer>
+  <UApp>
     <AppNavbar />
-    <NuxtPage />
-  </UContainer>
+    <UMain>
+      <NuxtPage />
+    </UMain>
+  </UApp>
 </template>
