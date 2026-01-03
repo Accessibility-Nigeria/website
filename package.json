@@ -1,0 +1,23 @@
+{
+  "name": "allyng-website",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@nuxt/fonts": "0.12.1",
+    "@nuxt/image": "2.0.0",
+    "@nuxt/ui": "4.2.1",
+    "nuxt": "^4.2.1",
+    "tailwindcss": "^4.1.17",
+    "typescript": "^5.6.3",
+    "vue": "^3.5.25",
+    "vue-router": "^4.6.3"
+  },
+  "packageManager": "pnpm@9.8.0+sha512.8e4c3550fb500e808dbc30bb0ce4dd1eb614e30b1c55245f211591ec2cdf9c611cabd34e1364b42f564bd54b3945ed0f49d61d1bbf2ec9bd74b866fcdc723276"
+}

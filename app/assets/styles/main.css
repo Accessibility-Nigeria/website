@@ -1,0 +1,53 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+@theme {
+  --font-sans: "Libre Franklin", "sans-serif";
+  --font-heading: "PT Sans", "sans-serif";
+  --color-white: #FAFAFA;
+  --color-primary: #005C3D;
+  --color-primary-dark: #00462e;
+  --color-body: #433F3E;
+  --color-dark: #0a0b0a;
+}
+
+:root {
+  --ui-bg: var(--color-white);
+  --ui-primary: var(--color-primary);
+  --ui-text: var(--color-body);
+}
+
+@layer components {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: bold;
+  }
+
+  h1 { font-size: 56px; line-height: 64px; }
+  h2 { font-size: 48px; line-height: 56px; }
+  h3 { font-size: 40px; line-height: 48px; }
+  h4 { font-size: 32px; line-height: 40px; }
+  h5 { font-size: 24px; line-height: 32px; }
+  h6 { font-size: 20px; line-height: 28px; }
+}
+
+@layer utilities {
+  .text-h1 { font-family: var(--font-heading); font-weight: bold; font-size: 56px; line-height: 64px; }
+  .text-h2 { font-family: var(--font-heading); font-weight: bold; font-size: 48px; line-height: 56px; }
+  .text-h3 { font-family: var(--font-heading); font-weight: bold; font-size: 40px; line-height: 48px; }
+  .text-h4 { font-family: var(--font-heading); font-weight: bold; font-size: 32px; line-height: 40px; }
+  .text-h5 { font-family: var(--font-heading); font-weight: bold; font-size: 24px; line-height: 32px; }
+  .text-h6 { font-family: var(--font-heading); font-weight: bold; font-size: 20px; line-height: 28px; }
+
+  .text-base {
+    font-size: 1rem;
+  }
+
+  .text-sm {
+    font-size: 0.875rem;
+  }
+
+  .text-lg {
+    font-size: 1.125rem;
+  }
+}
