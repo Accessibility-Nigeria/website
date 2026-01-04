@@ -49,7 +49,7 @@ const items = [
 </script>
 
 <template>
-  <UHeader :ui="{ root: isScrolled ? 'bg-white/90 dark:bg-black/90 backdrop-blur-md border-b border-gray-200 transition-all duration-300' : 'bg-transparent backdrop-blur-none border-none transition-all duration-300' }">
+  <UHeader mode="slideover" :ui="{ root: isScrolled ? 'bg-white/90 dark:bg-black/90 backdrop-blur-md border-b border-gray-200 transition-all duration-300' : 'bg-transparent backdrop-blur-none border-none transition-all duration-300' }">
     <template #title>
       <NuxtLink to="/" class="flex items-center gap-2">
         <img :src="logoImg" alt="a11yng" class="h-8 md:h-10" />
@@ -72,6 +72,10 @@ const items = [
         </ClientOnly>
         <UButton to="/partner" color="secondary" variant="solid" label="Partner With Us!!" />
       </div>
+    </template>
+
+    <template #body>
+      <UNavigationMenu :items="items" variant="link" orientation="vertical" />
     </template>
   </UHeader>
 </template>
