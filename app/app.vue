@@ -4,5 +4,6 @@
     <UMain>
       <NuxtPage />
     </UMain>
+    <AppFooter />
   </UApp>
 </template>
