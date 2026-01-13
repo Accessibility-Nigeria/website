@@ -78,20 +78,21 @@ const columns = [
 </script>
 
 <template>
-  <UFooter :ui="{ root: 'bg-dark text-white' }">
+  <UFooter :ui="{ root: 'bg-dark dark:bg-body text-white' }">
     <template #top>
       <div class="w-full max-w-(--ui-container) mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="border border-body rounded-4xl p-8 flex justify-between items-center">
-          <img :src="logoImg" alt="a11yng" />
+        <div class="border border-body dark:border-stroke rounded-4xl p-8 flex flex-col lg:flex-row justify-between lg:items-center">
+          <img :src="logoImg" alt="a11yng" class="mb-16 w-7/10 lg:w-[unset]" />
           <UFooterColumns 
             :columns="columns"
             :ui="{ 
-              root: 'xl:grid-cols-2',
-              center: 'gap-20',
-              link: 'text-white font-normal text-base',
+              root: 'grid-cols-2 xl:grid-cols-2',
+              center: 'gap-20 md:grid',
+              link: 'text-[#FFF] hover:text-white font-light text-base',
               label: 'text-lg',
-              linkLeadingIcon: 'size-6',
-              list: 'space-y-6',
+              linkLeadingIcon: 'size-6 mr-2',
+              linkLabelExternalIcon: 'hidden',
+              list: 'space-y-6'
             }"
           />
         </div>
@@ -101,10 +102,16 @@ const columns = [
     <template #left>
       <p class="text-base">© {{ new Date().getFullYear() }} AccessibilityNigeria. All rights reserved.</p>
     </template>
-    
 
     <template #right>
-      <UNavigationMenu :items="items" variant="link" :ui="{ link: 'text-white underline font-normal' }" />
+      <UNavigationMenu
+        :items="items"
+        variant="link"
+        :ui="{ 
+          link: 'text-white underline font-normal',
+          linkLabelExternalIcon: 'hidden',
+        }"
+      />
     </template>
   </UFooter>
 </template>
