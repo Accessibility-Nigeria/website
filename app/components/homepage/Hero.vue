@@ -1,7 +1,14 @@
 <script setup lang="ts">
 const colorMode = useColorMode()
 
-const isDark = computed(() => colorMode.value === 'dark')
+const isDark = computed({
+  get() {
+    return colorMode.value === 'dark'
+  },
+  set(_isDark) {
+    colorMode.preference = _isDark ? 'dark' : 'light'
+  }
+})
 
 import carouselImg1 from '~/assets/images/homepage-hero-image.jpg'
 

@@ -8,9 +8,12 @@
   --color-gray: #DADADA;
   --color-primary: #005C3D;
   --color-primary-dark: #00462e;
+  --color-primary-light: #82FFD5;
   --color-body: #433F3E;
   --color-dark: #0a0b0a;
   --color-stroke: #686565;
+  --color-red: #A81647;
+  --color-red-light: #F3A4BF;
 }
 
 :root {
@@ -35,6 +38,7 @@
 
   .dark body {
     color: var(--color-gray);
+    background: var(--color-dark);
   }
 }
 
