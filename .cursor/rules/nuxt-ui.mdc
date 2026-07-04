@@ -1,0 +1,29 @@
+---
+description: Use Nuxt UI components and consult the Nuxt UI MCP for APIs and examples
+globs: app/**/*.{vue,ts}
+alwaysApply: false
+---
+
+# Nuxt UI
+
+This project uses **Nuxt UI v4** (`@nuxt/ui`). Prefer Nuxt UI components over hand-rolled HTML/CSS.
+
+## Component preference
+
+- Layout: `UContainer`, `UMain`, `UHeader`, `UFooter`
+- Actions: `UButton`, `UBadge`
+- Content: `UCard`, `UAccordion`, `UInput`, `UTextarea`, `UIcon`
+- Navigation: `UNavigationMenu`
+
+Use existing project wrappers and tokens first: `BaseBadge`, colors in `app/assets/styles/main.css`, button variants in `app/app.config.ts`.
+
+## Before building custom UI
+
+1. Check whether Nuxt UI already has a component (accordion, form fields, modals, etc.).
+2. Use the **Nuxt UI MCP** (`nuxt-ui` in `.cursor/mcp.json`) for props, slots, and `ui` customization.
+3. Only build custom markup when Nuxt UI cannot match the design even with `ui` overrides or slots.
+
+## Styling
+
+- Extend components via the `ui` prop or `app.config.ts`, not one-off CSS, unless matching a specific design mockup.
+- Reuse established patterns from `about.vue`, `donate.vue`, and `contact.vue`.

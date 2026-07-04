@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import logoDark from '~/assets/images/logo-dark.svg'
+import logoLight from '~/assets/images/logo.svg'
+
 const { y: scrollY } = useWindowScroll()
 const colorMode = useColorMode()
 
@@ -13,10 +16,6 @@ const isDark = computed({
   }
 })
 
-import logoDark from '~/assets/images/logo-dark.svg'
-import logoLight from '~/assets/images/logo.svg'
-const logoImg = computed(() => isDark.value ? logoDark : logoLight)
-
 const items = [
   {
     label: 'About Us',
@@ -24,23 +23,23 @@ const items = [
   },
   {
     label: 'Make Donations',
-    to: '/donations'
+    to: '/donate'
   },
-  {
-    label: 'Get Involved',
-    children: [
-      {
-        label: 'Volunteer',
-        to: '/volunteer',
-        description: 'Join our team of volunteers'
-      },
-      {
-        label: 'Mentorship',
-        to: '/mentorship',
-        description: 'Provide guidance and support'
-      }
-    ]
-  },
+  // {
+  //   label: 'Get Involved',
+  //   children: [
+  //     {
+  //       label: 'Volunteer',
+  //       to: '/volunteer',
+  //       description: 'Join our team of volunteers'
+  //     },
+  //     {
+  //       label: 'Mentorship',
+  //       to: '/mentorship',
+  //       description: 'Provide guidance and support'
+  //     }
+  //   ]
+  // },
   {
     label: 'Contact & Support',
     to: '/contact'
@@ -52,7 +51,8 @@ const items = [
   <UHeader mode="slideover" :ui="{ root: isScrolled ? 'bg-white/90 dark:bg-black/90 backdrop-blur-md border-b border-gray-200 transition-all duration-300' : 'bg-transparent backdrop-blur-none border-none transition-all duration-300' }">
     <template #title>
       <NuxtLink to="/" class="flex items-center gap-2">
-        <img :src="logoImg" alt="a11yng" class="h-8 md:h-10" />
+        <img :src="logoLight" alt="a11yng" class="h-8 md:h-10 dark:hidden">
+        <img :src="logoDark" alt="a11yng" class="h-8 md:h-10 hidden dark:block">
       </NuxtLink>
     </template>
 

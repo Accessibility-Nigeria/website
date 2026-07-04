@@ -1,40 +1,31 @@
 <script setup lang="ts">
-import heroImg from '~/assets/images/team-image.jpg'
+import heroImg from '~/assets/images/breaking-barriers-together-banner.jpg'
+import missionImg from '~/assets/images/event-workshop-presentation.jpg'
+import visionImg from '~/assets/images/accessible-restroom-sign.jpg'
+import partnerImg from '~/assets/images/event-partner-presentation.jpg'
 import listLogoLight from '~/assets/images/list-logo.svg'
 import listLogoDark from '~/assets/images/list-logo-dark.svg'
 import BaseBadge from '~/components/app/BaseBadge.vue'
 
-const colorMode = useColorMode()
-const isDark = computed({
-  get() {
-    return colorMode.value === 'dark'
-  },
-  set(_isDark) {
-    colorMode.preference = _isDark ? 'dark' : 'light'
-  }
-})
-
-const listLogo = computed(() => isDark.value ? listLogoDark : listLogoLight)
-
 const missions = [
-  'Advocating for inclusive policies and practices guided by the Disability Act of 2018',
-  'Partnering with stakeholders, founders, communities, and event organizers to make accessibility non-negotiable',
+  'Partnering with stakeholders, founders, communities, organizations, and events to ensure accessibility is built in—not bolted on',
+  'Creating awareness and bringing accessibility enthusiasts across Nigeria together',
   'Driving accessibility in open-source projects, digital products, and tech events through audits, education, and collaboration',
-  'Empowering people with disabilities to contribute to, lead, and thrive in technology and design'
+  'Advocating for people with disabilities and enforcing more accessible digital products and events across Nigeria'
 ];
 
 const visionArray = [
-  'We envision a Nigeria where the Disability Act of 2018 is fully upheld and accessibility becomes the standard across every sector—technology, design, open-source, and events.',
-  'in this future, digital products, community projects, and open-source innovations are built with inclusion at their core, ensuring that people with disabilities can actively shape and benefit from Nigeria’s digital transformation.'
+  'We envision a Nigeria where the Disability Act of 2018 is upheld and applied as a standard across every national sector.',
+  'In this future, digital products, community projects, and events are built with inclusion at their core—so people with disabilities can actively shape and benefit from Nigeria\'s digital transformation.'
 ]
 
 const theTeam = [
-  {name: 'Victoria Ottah', position: 'Co-Founder', image: ''},
-  {name: 'Abdulqudus Abubakre', position: 'Co-Founder', image: ''},
-  {name: 'Yiga L. Samuel', position: 'Marketing Lead', image: ''},
-  {name: 'Ejiro Ogenekome', position: 'UX designer', image: ''},
-  {name: 'Khadija Ladan', position: 'Social Media', image: ''},
-  {name: 'Fauziya Mohammed', position: 'Design Lead', image: ''}
+  { name: 'Victoria Ottah', position: 'Co-Founder & Accessibility Designer', bio: 'Accessibility designer and open-source advocate. Victoria carries out accessibility advocacy through technical writing, mentorship, design, audits, and public speaking—advocating for women, diversity, equity, inclusion, and people with disabilities.' },
+  { name: 'Abdulqudus Abubakre', position: 'Co-Founder & Front-end Developer', bio: 'Front-end developer and accessibility advocate with a passion for inclusive digital experiences. Recognising a significant gap in accessibility awareness in Nigeria, Abdulqudus partnered with Victoria to establish Accessibility Nigeria.' },
+  { name: 'Yiga L. Samuel', position: 'Marketing Lead', bio: '' },
+  { name: 'Ejiro Ogenekome', position: 'UX Designer', bio: '' },
+  { name: 'Khadija Ladan', position: 'Social Media', bio: '' },
+  { name: 'Fauziya Mohammed', position: 'Design Lead', bio: '' }
 ]
 </script>
 
@@ -49,7 +40,7 @@ const theTeam = [
             <span class="block">Future for Everyone</span>
           </h1>
           <p class="text-base w-full lg:w-2/5">
-            We are a nonprofit organization driving inclusion and accessibility in the digital World.
+            A nonprofit community bridging the gap between people with disabilities, those who support them, and society—working toward an accessible web and environment across Nigeria.
           </p>
         </div>
         <img :src="heroImg" class="rounded-[3xl] lg:rounded-[50px] mx-auto mt-8 lg:mt-16 border border-[#E2E1E1]">
@@ -68,29 +59,29 @@ const theTeam = [
           <div class="block w-full lg:w-1/2">
             <h1 class="text-black dark:text-white uppercase font-bold mb-6 text-2xl lg:text-6xl">Our Mission</h1>
             <p class="text-base lg:text-lg">
-              Accessibility Nigeria’s mission is to embed accessibility into the heart of Nigeria&apos;s tech ecosystem. We achieve this by:
+              Our mission is to embed accessibility into Nigeria&apos;s tech ecosystem and make inclusive digital products and events the norm. We achieve this by:
             </p>
 
             <div class="lg:my-8">
               <UCard v-for="(mission, index) in missions" :key="index" class="my-6 bg-[#EEF1F8] dark:bg-body ring-transparent rounded-2xl" :ui="{ body: 'flex gap-4'}">
-                <img :src="listLogo">
+                <img :src="listLogoLight" alt="" class="dark:hidden shrink-0">
+                <img :src="listLogoDark" alt="" class="hidden dark:block shrink-0">
                 <p class="text-sm lg:text-base dark:text-white">{{ mission }}</p>
               </UCard>
             </div>
           </div>
-          <div class="rounded-3xl lg:rounded-[50px] h-[396px] lg:h-[688px] w-full lg:w-1/2 my-4 lg:my-16 bg-gray-200 dark:bg-gray-700" />
-          <!-- <img :src="heroImg" class="rounded-[50px] w-1/2 my-16 border border-[#E2E1E1]"> -->
+          <img :src="missionImg" alt="Accessibility workshop with audience" class="rounded-3xl lg:rounded-[50px] h-[396px] lg:h-[688px] w-full lg:w-1/2 my-4 lg:my-16 object-cover border border-[#E2E1E1]">
         </div>
 
         <div class="flex flex-col-reverse lg:flex-row items-center gap-8">
-          <div class="rounded-3xl lg:rounded-[50px] h-[278px] lg:h-[530px] w-full lg:w-1/2 lg:my-16 bg-gray-200 dark:bg-gray-700" />
-          <!-- <img :src="heroImg" class="rounded-[50px] w-1/2 my-16 border border-[#E2E1E1]"> -->
+          <img :src="visionImg" alt="Accessible restroom signage with Braille and universal access symbols" class="rounded-3xl lg:rounded-[50px] h-[278px] lg:h-[530px] w-full lg:w-1/2 lg:my-16 object-cover border border-[#E2E1E1]">
           <div class="block lg:w-1/2">
             <h1 class="text-black dark:text-white uppercase font-bold mb-6 text-2xl lg:text-6xl">Our Vision</h1>
             
             <div class="my-8">
               <UCard v-for="(vision, index) in visionArray" :key="index" class="my-6 bg-[#EEF1F8] dark:bg-body ring-transparent rounded-2xl" :ui="{ body: 'flex gap-4'}">
-                <img :src="listLogo">
+                <img :src="listLogoLight" alt="" class="dark:hidden shrink-0">
+                <img :src="listLogoDark" alt="" class="hidden dark:block shrink-0">
                 <p class="text-sm lg:text-base dark:text-white">{{ vision }}</p>
               </UCard>
             </div>
@@ -103,26 +94,27 @@ const theTeam = [
           <BaseBadge>The Core Team</BaseBadge>
           <h1 class="text-black dark:text-white uppercase font-bold mb-6 text-3xl lg:text-6xl">meet the team</h1>
           <p class="text-base lg:text-lg">
-            Accessibility Nigeria is powered by a diverse team of experts and advocates who believe in the power of inclusion. Each member brings unique skills to ensure that people with disabilities are at the centre of Nigeria&apos;s digital future.
+            Accessibility Nigeria is setting a standard for inclusion that we believe will spread throughout the country—powered by advocates, designers, developers, and community members who share this vision.
           </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full ">
-          <div v-for="(team, index) in theTeam" :key="index" class="space-4">
+          <div v-for="(team, index) in theTeam" :key="index" class="space-y-2">
             <div class="rounded-3xl h-67 w-full bg-gray-200 dark:bg-gray-700 mb-4" />
-            <h1 class="text-black dark:text-white uppercase font-bold text-2xl">{{ team.name }}</h1>
-            <p class="text-base">{{ team.position }}</p>
+            <h2 class="text-black dark:text-white uppercase font-bold text-2xl">{{ team.name }}</h2>
+            <p class="text-base font-medium">{{ team.position }}</p>
+            <p v-if="team.bio" class="text-sm lg:text-base">{{ team.bio }}</p>
           </div>
         </div>
       </section>
 
-      <section :class="['partnerSection px-5 py-10 lg:p-16 border border-[#CCCCCC] dark:border-stroke rounded-[25px] lg:rounded-[50px] mb-20 flex flex-col-reverse lg:flex-row items-center gap-10', { 'partnerSection--dark': isDark }]">
-        <div class="rounded-3xl h-[334px] lg:h-[573px] w-full lg:w-1/2 bg-gray-200 dark:bg-gray-700 mb-4" />
+      <section class="partnerSection px-5 py-10 lg:p-16 border border-[#CCCCCC] dark:border-stroke rounded-[25px] lg:rounded-[50px] mb-20 flex flex-col-reverse lg:flex-row items-center gap-10 bg-gradient-to-r from-[#DCFBF0] via-[#FBDAE1] to-[#FFF3F5] dark:from-[#00462E] dark:via-[#60112C] dark:to-[#560B24]">
+        <img :src="partnerImg" alt="Accessibility Nigeria partner presentation" class="rounded-3xl h-[334px] lg:h-[573px] w-full lg:w-1/2 mb-4 object-cover border border-[#E2E1E1]">
         <div class="lg:w-1/2">
           <BaseBadge>Partner with us</BaseBadge>
           <h1 class="text-black dark:text-white uppercase font-bold mb-6 text-[32px]/10 lg:text-[56px]/14">Breaking Barriers Through Collaboration</h1>
           <p class="text-base mb-10">
-            At Accessibility Nigeria, we work with partners who believe technology should serve everyone—especially people with disabilities.
+            Partner with us to make your tech events and digital products accessible. From sign language provision and venue audits to sensitivity training and slide reviews—we help partners deliver truly inclusive experiences.
           </p>
           <UButton to="/partner" label="Partner With Us" :ui="{base: 'bg-dark dark:bg-white dark:text-body'}" />
         </div>
@@ -130,13 +122,3 @@ const theTeam = [
     </UContainer>
   </div>
 </template>
-
-<style lang="scss" scoped>
-.partnerSection {
-  background: linear-gradient(to right, #DCFBF0 -2.22%, #FBDAE1 50.15%, #FFF3F5 100%);
-
-  &--dark {
-    background: linear-gradient(to right, #00462E -2.22%, #60112C 50.15%, #560B24 100%);
-  }
-}
-</style>

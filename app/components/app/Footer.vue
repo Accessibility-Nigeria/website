@@ -30,7 +30,7 @@ const columns = [
       },
       {
         label: 'Make a Donation',
-        to: '/donation',
+        to: '/donate',
         target: '_blank'
       },
       {

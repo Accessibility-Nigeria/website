@@ -2,7 +2,14 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  modules: ['@nuxt/ui', '@nuxt/image', '@nuxt/fonts',  '@vueuse/nuxt'],
+  modules: ['@nuxt/ui', '@nuxt/image', '@nuxt/fonts', '@vueuse/nuxt'],
+  nitro: {
+    // Cloudflare Pages sets CF_PAGES=1 during CI builds; Nuxt auto-detects this too.
+    preset: process.env.CF_PAGES ? 'cloudflare-pages' : undefined,
+    prerender: {
+      autoSubfolderIndex: false,
+    },
+  },
   fonts: {
     families: [
       // only resolve this font with the `google` provider
