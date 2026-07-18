@@ -178,17 +178,34 @@ function openProfile(member: TeamMember) {
 
         <UModal
           v-model:open="isProfileOpen"
-          :title="selectedMember?.name"
-          :description="selectedMember?.position"
+          :close="false"
           :ui="{
             content: 'sm:max-w-lg bg-white dark:bg-[#2B2928] ring-1 ring-[#E2E1E1] dark:ring-stroke',
             header: 'bg-white dark:bg-[#2B2928]',
-            body: 'bg-white dark:bg-[#2B2928]',
-            title: 'text-black dark:text-white uppercase font-bold',
-            description: 'text-body dark:text-gray',
-            close: 'text-body dark:text-gray hover:bg-gray-100 dark:hover:bg-body'
+            body: 'bg-white dark:bg-[#2B2928]'
           }"
         >
+          <template v-if="selectedMember" #header="{ close }">
+            <div class="flex items-start gap-3 w-full min-w-0">
+              <div class="min-w-0 flex-1 space-y-1">
+                <h2 class="text-lg sm:text-xl leading-snug text-black dark:text-white uppercase font-bold break-words">
+                  {{ selectedMember.name }}
+                </h2>
+                <p class="text-sm text-body dark:text-gray">
+                  {{ selectedMember.position }}
+                </p>
+              </div>
+              <UButton
+                icon="i-lucide-x"
+                color="neutral"
+                variant="ghost"
+                size="sm"
+                class="shrink-0"
+                aria-label="Close profile"
+                @click="close"
+              />
+            </div>
+          </template>
           <template v-if="selectedMember" #body>
             <div class="space-y-5">
               <img
