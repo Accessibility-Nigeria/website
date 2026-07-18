@@ -25,9 +25,9 @@ const features = [
 ]
 
 const socialLinks = [
-  { icon: 'i-simple-icons-github', label: 'GitHub', to: 'https://github.com' },
-  { icon: 'i-simple-icons-x', label: 'X', to: 'https://x.com' },
-  { icon: 'i-simple-icons-linkedin', label: 'LinkedIn', to: 'https://linkedin.com' }
+  { icon: 'i-simple-icons-github', label: 'GitHub', to: 'https://github.com/Accessibility-Nigeria' },
+  { icon: 'i-simple-icons-x', label: 'X', to: 'https://x.com/A11yNGN' },
+  { icon: 'i-simple-icons-linkedin', label: 'LinkedIn', to: 'https://www.linkedin.com/in/accessibility-nigeria-939681297/' }
 ]
 </script>
 

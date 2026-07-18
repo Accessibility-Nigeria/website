@@ -51,19 +51,19 @@ const columns = [
       {
         label: 'Github',
         icon: 'i-simple-icons-github',
-        to: '/',
+        to: 'https://github.com/Accessibility-Nigeria',
         target: '_blank'
       },
       {
         label: 'X',
         icon: 'i-simple-icons-x',
-        to: '/',
+        to: 'https://x.com/A11yNGN',
         target: '_blank'
       },
       {
         label: 'LinkedIn',
         icon: 'i-simple-icons-linkedin',
-        to: '/',
+        to: 'https://www.linkedin.com/in/accessibility-nigeria-939681297/',
         target: '_blank'
       },
       {

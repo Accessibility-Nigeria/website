@@ -8,10 +8,13 @@ useSeoMeta({
   description: 'Get in touch with Accessibility Nigeria. Find answers to common questions or reach out to our team.'
 })
 
+const contactFormUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSeg0otcmvPFUG_lkk1QEqY0PRI0bBixuFm9S2K8-RSCDgEbJA/viewform'
+const contactFormEmbedUrl = `${contactFormUrl}?embedded=true`
+
 const socialLinks = [
-  { icon: 'i-simple-icons-github', label: 'GitHub', to: 'https://github.com' },
-  { icon: 'i-simple-icons-x', label: 'X', to: 'https://x.com' },
-  { icon: 'i-simple-icons-linkedin', label: 'LinkedIn', to: 'https://linkedin.com' }
+  { icon: 'i-simple-icons-github', label: 'GitHub', to: 'https://github.com/Accessibility-Nigeria' },
+  { icon: 'i-simple-icons-x', label: 'X', to: 'https://x.com/A11yNGN' },
+  { icon: 'i-simple-icons-linkedin', label: 'LinkedIn', to: 'https://www.linkedin.com/in/accessibility-nigeria-939681297/' }
 ]
 
 const faqItems = [
@@ -163,7 +166,27 @@ const faqItems = [
             <p class="text-base lg:text-lg">
               Whether you have a question, want to collaborate, or need support with accessibility — we'd love to hear from you. Fill out the form and a member of our team will get back to you shortly.
             </p>
-            <div class="bg-white dark:bg-[#2B2928] rounded-3xl lg:rounded-[40px] p-6 lg:p-10 shadow-[0_4px_24px_#083D2B1A] border border-[#E2E1E1] dark:border-stroke min-h-[480px]" />
+            <p class="text-sm lg:text-base">
+              Prefer not to use the embedded form?
+              <a
+                :href="contactFormUrl"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="underline font-medium text-primary dark:text-primary-light"
+              >
+                Open the contact form in a new tab
+              </a>.
+            </p>
+            <div class="bg-white dark:bg-[#2B2928] rounded-3xl lg:rounded-[40px] p-2 sm:p-4 shadow-[0_4px_24px_#083D2B1A] border border-[#E2E1E1] dark:border-stroke overflow-hidden">
+              <iframe
+                :src="contactFormEmbedUrl"
+                title="a11yNG Contact Us form"
+                class="w-full min-h-[720px] sm:min-h-[800px] rounded-2xl lg:rounded-[32px] border-0"
+                loading="lazy"
+              >
+                Loading contact form…
+              </iframe>
+            </div>
           </div>
         </div>
       </section>
