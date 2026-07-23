@@ -18,4 +18,8 @@ export default defineNuxtConfig({
     ]
   },
   css: ['@/assets/styles/main.css'],
+  routeRules: {
+    // Hide unfinished donate page until it's ready
+    '/donate': { redirect: '/' },
+  },
 })

@@ -21,10 +21,11 @@ const items = [
     label: 'About Us',
     to: '/about'
   },
-  {
-    label: 'Make Donations',
-    to: '/donate'
-  },
+  // Hidden until the donate page is ready
+  // {
+  //   label: 'Make Donations',
+  //   to: '/donate'
+  // },
   // {
   //   label: 'Get Involved',
   //   children: [

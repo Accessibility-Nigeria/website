@@ -28,11 +28,12 @@ const columns = [
         to: '/about',
         target: '_blank'
       },
-      {
-        label: 'Make a Donation',
-        to: '/donate',
-        target: '_blank'
-      },
+      // Hidden until the donate page is ready
+      // {
+      //   label: 'Make a Donation',
+      //   to: '/donate',
+      //   target: '_blank'
+      // },
       {
         label: 'Get Involved',
         to: '/get-involved',

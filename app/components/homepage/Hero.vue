@@ -38,10 +38,10 @@ const items = [
               class="w-full sm:w-auto justify-center"
             />
             <UButton
-              to="/donate"
+              to="/contact"
               color="secondary"
               variant="outline"
-              label="Make A Donation"
+              label="Contact & Support"
               class="w-full sm:w-auto justify-center"
             />
           </div>

@@ -108,7 +108,7 @@ const greenStat = {
 
       <div class="flex justify-center mt-12 lg:mt-16">
         <UButton
-          to="/donate"
+          to="/partner"
           color="secondary"
           variant="outline"
           label="Help Us Do More"

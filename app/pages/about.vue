@@ -8,6 +8,9 @@ import listLogoDark from '~/assets/images/list-logo-dark.svg'
 import teamEjiro from '~/assets/images/team-ejiro-ogenekome.jpg'
 import teamKhadija from '~/assets/images/team-khadija-ladan.jpg'
 import teamFauziya from '~/assets/images/team-fauziya-mohammed.jpg'
+import teamVictoria from '~/assets/images/team-victoria-ottah.jpg'
+import teamAbdulqudus from '~/assets/images/team-abdulqudus-abubakre.jpg'
+import teamYiga from '~/assets/images/team-yigakpoa-ikpae.jpg'
 import BaseBadge from '~/components/app/BaseBadge.vue'
 
 const missions = [
@@ -24,22 +27,22 @@ const visionArray = [
 
 const theTeam = [
   {
-    name: 'Victoria Ottah',
-    position: 'Co-Founder & Accessibility Designer',
-    bio: 'Accessibility designer and open-source advocate. Victoria carries out accessibility advocacy through technical writing, mentorship, design, audits, and public speaking—advocating for women, diversity, equity, inclusion, and people with disabilities.',
-    image: null as string | null
+    name: 'Victoria Ottah (Toria)',
+    position: 'Frontline Safety and Accessibility Professional',
+    bio: 'Victoria Ottah is a multidisciplinary technologist, pioneering author, open-source maintainer, and frontline safety professional driving Equity, Diversity, Inclusion, and Accessibility (EDIA) across digital and industrial ecosystems. She is the co-founder and lead of Accessibility Nigeria, bridging the digital divide for people with disabilities, and co-author of the first book on digital ethical accessibility, establishing foundational frameworks that unite ethical responsibility, human rights, and inclusive design.\n\nVictoria serves as a Board Member and Accessibility Lead at CHAOSS, embedding W3C/WCAG standards into open-source governance. As a Women Techmakers Ambassador and member of the Sub-Advisory Council, she champions pathways for women in STEM through mentorship, policy advocacy, and community building.\n\nAdding a rare operational dimension to her technical profile, Victoria serves as a Fireman in natural gas and energy operations, strictly adhering to ISO safety and risk management standards. Her frontline work in hazard containment, emergency response, and risk mitigation brings a deep understanding of human factors, crisis management, and system resilience under pressure. Coupled with her background in User Experience (UX) design, she seamlessly connects physical industrial safety with intuitive, accessible software architecture.',
+    image: teamVictoria
   },
   {
     name: 'Abdulqudus Abubakre',
     position: 'Co-Founder & Front-end Developer',
-    bio: 'Front-end developer and accessibility advocate with a passion for inclusive digital experiences. Recognising a significant gap in accessibility awareness in Nigeria, Abdulqudus partnered with Victoria to establish Accessibility Nigeria.',
-    image: null as string | null
+    bio: 'Abdulqudus Abubakre is a Senior Frontend Developer and the co-founder of Accessibility Nigeria. He is passionate about building inclusive digital experiences and advocates for accessibility as a fundamental part of creating quality products.\n\nHe leads initiatives that promote accessibility awareness through community events, workshops, mentorship, and collaborations with the wider tech ecosystem. His goal is to help make accessibility knowledge more accessible and inspire individuals and organizations to build technology that works for everyone.',
+    image: teamAbdulqudus
   },
   {
-    name: 'Yiga L. Samuel',
+    name: 'Yigakpoa L. Ikpae',
     position: 'Marketing Lead',
-    bio: '',
-    image: null as string | null
+    bio: 'Yigakpoa L. Ikpae is a Technologist, Researcher, Mentor, and Open-Source Advocate driving social good at the intersection of open data, accessibility, civic tech, and climate justice. Driven by a mission to build digital equity, strengthen community resilience, and foster government transparency, Yiga actively shapes inclusive technology solutions that center marginalized voices.\n\nRecognized as an honorary Global Leader and honored by Google for her contributions to open source, Yiga has brought her expertise to prominent global stages; including speaking at the United Nations Headquarters and participating as a delegate in high-level international convenings across the African Union (AU), UN Geneva, and beyond.\n\nBeyond her advocacy and research, Yiga is committed to cultivating the next generation of tech talent and has served as a mentor with programs like Outreachy, passionately opening doors for underrepresented communities in technology. When she isn’t building or advocating, she unwinds through painting and embracing the good life.',
+    image: teamYiga
   },
   {
     name: 'Ejiro Ogenekome',
@@ -72,7 +75,6 @@ const isProfileOpen = computed({
 })
 
 function openProfile(member: TeamMember) {
-  if (!member.image) return
   selectedMember.value = member
 }
 </script>
@@ -149,30 +151,22 @@ function openProfile(member: TeamMember) {
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full ">
           <div v-for="(team, index) in theTeam" :key="index" class="space-y-2">
             <button
-              v-if="team.image"
               type="button"
-              class="group relative block w-full rounded-3xl overflow-hidden mb-4 border border-[#E2E1E1] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary cursor-pointer"
+              class="group relative block w-full aspect-4/5 rounded-3xl overflow-hidden mb-4 border border-[#E2E1E1] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary cursor-pointer"
               :aria-label="`View profile for ${team.name}`"
               @click="openProfile(team)"
             >
               <img
                 :src="team.image"
                 :alt="`Portrait of ${team.name}`"
-                class="h-67 w-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
+                class="size-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
               >
               <span class="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/50 to-transparent px-4 py-3 text-left text-sm text-white opacity-0 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100">
                 View profile
               </span>
             </button>
-            <div
-              v-else
-              class="rounded-3xl h-67 w-full bg-gray-200 dark:bg-gray-700 mb-4"
-              :aria-label="`Photo coming soon for ${team.name}`"
-              role="img"
-            />
             <h2 class="text-black dark:text-white uppercase font-bold text-2xl">{{ team.name }}</h2>
             <p class="text-base font-medium">{{ team.position }}</p>
-            <p v-if="team.bio && !team.image" class="text-sm lg:text-base">{{ team.bio }}</p>
           </div>
         </div>
 
@@ -209,9 +203,9 @@ function openProfile(member: TeamMember) {
           <template v-if="selectedMember" #body>
             <div class="space-y-5">
               <img
-                :src="selectedMember.image!"
+                :src="selectedMember.image"
                 :alt="`Portrait of ${selectedMember.name}`"
-                class="w-full rounded-2xl object-cover object-top max-h-[420px] border border-[#E2E1E1] dark:border-stroke"
+                class="w-full rounded-2xl object-cover object-center max-h-[420px] border border-[#E2E1E1] dark:border-stroke"
               >
               <div class="space-y-3">
                 <p
