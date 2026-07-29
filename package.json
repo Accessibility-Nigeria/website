@@ -35,5 +35,10 @@
     "sass": "^1.97.1",
     "sharp": "^0.35.3",
     "wrangler": "^4.54.0"
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "unenv@2.0.0-rc.24": "patches/unenv@2.0.0-rc.24.patch"
+    }
   }
 }
