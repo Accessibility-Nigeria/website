@@ -52,8 +52,8 @@ const items = [
   <UHeader mode="slideover" :ui="{ root: isScrolled ? 'bg-white/90 dark:bg-black/90 backdrop-blur-md border-b border-gray-200 transition-all duration-300' : 'bg-transparent backdrop-blur-none border-none transition-all duration-300' }">
     <template #title>
       <NuxtLink to="/" class="flex items-center gap-2">
-        <img :src="logoLight" alt="a11yng" class="h-8 md:h-10 dark:hidden">
-        <img :src="logoDark" alt="a11yng" class="h-8 md:h-10 hidden dark:block">
+        <img :src="logoLight" alt="Accessibility Nigeria" class="h-8 md:h-10 dark:hidden">
+        <img :src="logoDark" alt="Accessibility Nigeria" class="h-8 md:h-10 hidden dark:block">
       </NuxtLink>
     </template>
 

@@ -5,8 +5,9 @@ import listLogoDark from '~/assets/images/list-logo-dark.svg'
 import BaseBadge from '~/components/app/BaseBadge.vue'
 
 useSeoMeta({
-  title: 'Donate | Accessibility Nigeria',
-  description: 'Support Accessibility Nigeria in building an accessible future for everyone.'
+  title: 'Donate',
+  description: 'Support Accessibility Nigeria in building an accessible future for everyone across Nigeria\'s digital and physical environments.',
+  robots: 'noindex, nofollow',
 })
 
 const features = [

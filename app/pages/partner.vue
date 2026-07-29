@@ -1,10 +1,23 @@
 <script setup lang="ts">
-import partnerImg from '~/assets/images/team-image.jpg'
+import partnerImg from '~/assets/images/event-partner-presentation.jpg'
 import BaseBadge from '~/components/app/BaseBadge.vue'
 
 useSeoMeta({
-  title: 'Partner With Us | Accessibility Nigeria',
-  description: 'Partner with Accessibility Nigeria to build accessible experiences, empower communities, and create lasting impact through collaboration.'
+  title: 'Partner With Us',
+  description:
+    'Partner with Accessibility Nigeria to make tech events and digital products accessible—sign language, venue audits, sensitivity training, and inclusive design support.',
+  ogTitle: 'Partner With Us | Accessibility Nigeria',
+  ogDescription:
+    'Collaborate with Accessibility Nigeria to build accessible experiences and inclusive communities.',
+  twitterCard: 'summary_large_image',
+  twitterTitle: 'Partner With Us | Accessibility Nigeria',
+  twitterDescription:
+    'Collaborate with Accessibility Nigeria to build accessible experiences and inclusive communities.',
+})
+
+defineOgImage('A11yDefault', {
+  title: 'Partner With Us',
+  description: 'Build accessible experiences with Accessibility Nigeria.',
 })
 
 const partnerFormUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSePkTjE8iF2_JuN1zt63U6--E-7yZ1m5MfpSjQeneqz4gO45A/viewform'
@@ -61,7 +74,7 @@ const socialLinks = [
           <div class="w-full lg:w-2/5 space-y-8">
             <img
               :src="partnerImg"
-              alt="Team members collaborating on an accessibility project"
+              alt="Accessibility Nigeria partner presentation at CHAOSScon Africa"
               class="rounded-3xl lg:rounded-[50px] w-full border border-[#E2E1E1] object-cover aspect-4/5 lg:aspect-auto lg:min-h-[420px]"
             >
             <div class="flex flex-wrap items-center gap-4">

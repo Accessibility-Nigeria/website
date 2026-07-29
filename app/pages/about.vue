@@ -13,6 +13,24 @@ import teamAbdulqudus from '~/assets/images/team-abdulqudus-abubakre.jpg'
 import teamYiga from '~/assets/images/team-yigakpoa-ikpae.jpg'
 import BaseBadge from '~/components/app/BaseBadge.vue'
 
+useSeoMeta({
+  title: 'About Us',
+  description:
+    'Learn about Accessibility Nigeria\'s mission, vision, and team—building a digital future where people with disabilities can fully participate in Nigeria\'s tech ecosystem.',
+  ogTitle: 'About Accessibility Nigeria',
+  ogDescription:
+    'Our mission, vision, and the team advocating for accessible digital products and events across Nigeria.',
+  twitterCard: 'summary_large_image',
+  twitterTitle: 'About Accessibility Nigeria',
+  twitterDescription:
+    'Our mission, vision, and the team advocating for accessible digital products and events across Nigeria.',
+})
+
+defineOgImage('A11yDefault', {
+  title: 'About Accessibility Nigeria',
+  description: 'Building a digital future for everyone across Nigeria.',
+})
+
 const missions = [
   'Partnering with stakeholders, founders, communities, organizations, and events to ensure accessibility is built in—not bolted on',
   'Creating awareness and bringing accessibility enthusiasts across Nigeria together',
@@ -93,13 +111,13 @@ function openProfile(member: TeamMember) {
             A nonprofit community bridging the gap between people with disabilities, those who support them, and society—working toward an accessible web and environment across Nigeria.
           </p>
         </div>
-        <img :src="heroImg" class="rounded-[3xl] lg:rounded-[50px] mx-auto mt-8 lg:mt-16 border border-[#E2E1E1]">
+        <img :src="heroImg" alt="Accessibility Nigeria community at Breaking Barriers Together" class="rounded-[3xl] lg:rounded-[50px] mx-auto mt-8 lg:mt-16 border border-[#E2E1E1]">
       </section>
 
       <section class="my-16">
         <div class="mx-auto mb-16 max-w-[720px] text-center">
           <BaseBadge>Our Mission & Vision</BaseBadge>
-          <h1 class="text-black dark:text-white uppercase font-bold mb-6 text-3xl lg:text-6xl">Our Commitment to Accessibility and Inclusion</h1>
+          <h2 class="text-black dark:text-white uppercase font-bold mb-6 text-3xl lg:text-6xl">Our Commitment to Accessibility and Inclusion</h2>
           <p class="text-base lg:text-lg">
             At Accessibility Nigeria, our commitment begins with a simple belief: technology should empower, not exclude.
           </p>
@@ -107,7 +125,7 @@ function openProfile(member: TeamMember) {
 
         <div class="flex flex-col lg:flex-row items-center gap-4 lg:gap-8 mb-6 lg:mb-0">
           <div class="block w-full lg:w-1/2">
-            <h1 class="text-black dark:text-white uppercase font-bold mb-6 text-2xl lg:text-6xl">Our Mission</h1>
+            <h2 class="text-black dark:text-white uppercase font-bold mb-6 text-2xl lg:text-6xl">Our Mission</h2>
             <p class="text-base lg:text-lg">
               Our mission is to embed accessibility into Nigeria&apos;s tech ecosystem and make inclusive digital products and events the norm. We achieve this by:
             </p>
@@ -126,7 +144,7 @@ function openProfile(member: TeamMember) {
         <div class="flex flex-col-reverse lg:flex-row items-center gap-8">
           <img :src="visionImg" alt="Accessible restroom signage with Braille and universal access symbols" class="rounded-3xl lg:rounded-[50px] h-[278px] lg:h-[530px] w-full lg:w-1/2 lg:my-16 object-cover border border-[#E2E1E1]">
           <div class="block lg:w-1/2">
-            <h1 class="text-black dark:text-white uppercase font-bold mb-6 text-2xl lg:text-6xl">Our Vision</h1>
+            <h2 class="text-black dark:text-white uppercase font-bold mb-6 text-2xl lg:text-6xl">Our Vision</h2>
             
             <div class="my-8">
               <UCard v-for="(vision, index) in visionArray" :key="index" class="my-6 bg-[#EEF1F8] dark:bg-body ring-transparent rounded-2xl" :ui="{ body: 'flex gap-4'}">
@@ -142,7 +160,7 @@ function openProfile(member: TeamMember) {
       <section class="my-16">
         <div class="mx-auto max-w-[720px] mb-14 text-center">
           <BaseBadge>The Core Team</BaseBadge>
-          <h1 class="text-black dark:text-white uppercase font-bold mb-6 text-3xl lg:text-6xl">meet the team</h1>
+          <h2 class="text-black dark:text-white uppercase font-bold mb-6 text-3xl lg:text-6xl">Meet the Team</h2>
           <p class="text-base lg:text-lg">
             Accessibility Nigeria is setting a standard for inclusion that we believe will spread throughout the country—powered by advocates, designers, developers, and community members who share this vision.
           </p>
@@ -225,7 +243,7 @@ function openProfile(member: TeamMember) {
         <img :src="partnerImg" alt="Accessibility Nigeria partner presentation" class="rounded-3xl h-[334px] lg:h-[573px] w-full lg:w-1/2 mb-4 object-cover border border-[#E2E1E1]">
         <div class="lg:w-1/2">
           <BaseBadge>Partner with us</BaseBadge>
-          <h1 class="text-black dark:text-white uppercase font-bold mb-6 text-[32px]/10 lg:text-[56px]/14">Breaking Barriers Through Collaboration</h1>
+          <h2 class="text-black dark:text-white uppercase font-bold mb-6 text-[32px]/10 lg:text-[56px]/14">Breaking Barriers Through Collaboration</h2>
           <p class="text-base mb-10">
             Partner with us to make your tech events and digital products accessible. From sign language provision and venue audits to sensitivity training and slide reviews—we help partners deliver truly inclusive experiences.
           </p>

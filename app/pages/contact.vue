@@ -4,8 +4,21 @@ import contactImg from '~/assets/images/team-volunteers-outdoor.jpg'
 import BaseBadge from '~/components/app/BaseBadge.vue'
 
 useSeoMeta({
-  title: 'Contact & Support | Accessibility Nigeria',
-  description: 'Get in touch with Accessibility Nigeria. Find answers to common questions or reach out to our team.'
+  title: 'Contact & Support',
+  description:
+    'Get in touch with Accessibility Nigeria. Browse FAQs about our programmes, partnerships, and accessibility work—or reach out to our team.',
+  ogTitle: 'Contact & Support | Accessibility Nigeria',
+  ogDescription:
+    'Questions about our mission, programmes, or partnerships? Browse FAQs or contact the Accessibility Nigeria team.',
+  twitterCard: 'summary_large_image',
+  twitterTitle: 'Contact & Support | Accessibility Nigeria',
+  twitterDescription:
+    'Questions about our mission, programmes, or partnerships? Browse FAQs or contact the Accessibility Nigeria team.',
+})
+
+defineOgImage('A11yDefault', {
+  title: 'Contact & Support',
+  description: 'FAQs and contact for Accessibility Nigeria.',
 })
 
 const contactFormUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSeg0otcmvPFUG_lkk1QEqY0PRI0bBixuFm9S2K8-RSCDgEbJA/viewform'
@@ -54,6 +67,15 @@ const faqItems = [
     content: 'Our primary focus is Nigeria\'s tech ecosystem and making the Disability Act of 2018 a practical standard across sectors. We also collaborate with international open-source communities and partners like CHAOSS Africa to advance accessibility more broadly.'
   }
 ]
+
+useSchemaOrg(
+  faqItems.map(item =>
+    defineQuestion({
+      name: item.label,
+      acceptedAnswer: item.content,
+    }),
+  ),
+)
 </script>
 
 <template>

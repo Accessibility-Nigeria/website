@@ -1,23 +1,9 @@
 <script setup lang="ts">
 import logoImg from '~/assets/images/logo-white.svg'
 
-const items = [
-  {
-    label: 'Privacy Policy',
-    to: '/privacy-policy',
-    target: '_blank'
-  },
-  {
-    label: 'Terms of Service',
-    to: '/terms-of-service',
-    target: '_blank'
-  },
-  {
-    label: 'Cookies Settings',
-    to: '/cookies',
-    target: '_blank'
-  }
-]
+// Legal pages (privacy, terms, cookies) are not published yet — omit until they exist
+// so crawlers and users are not sent to 404s.
+const items: { label: string, to: string, target?: string }[] = []
 
 const columns = [
   {
@@ -26,28 +12,19 @@ const columns = [
       {
         label: 'About Us',
         to: '/about',
-        target: '_blank'
       },
-      // Hidden until the donate page is ready
-      // {
-      //   label: 'Make a Donation',
-      //   to: '/donate',
-      //   target: '_blank'
-      // },
       {
-        label: 'Get Involved',
-        to: '/get-involved',
-        target: '_blank'
+        label: 'Partner With Us',
+        to: '/partner',
       },
       {
         label: 'Contact & Support',
         to: '/contact',
-        target: '_blank'
       },
     ]
   },
   {
-    label: 'Quick links',
+    label: 'Connect',
     children: [
       {
         label: 'Github',
@@ -67,12 +44,6 @@ const columns = [
         to: 'https://www.linkedin.com/in/accessibility-nigeria-939681297/',
         target: '_blank'
       },
-      {
-        label: 'Youtube',
-        icon: 'i-simple-icons-youtube',
-        to: '/',
-        target: '_blank'
-      },
     ]
   }
 ]
@@ -83,7 +54,7 @@ const columns = [
     <template #top>
       <div class="w-full max-w-(--ui-container) mx-auto px-4 sm:px-6 lg:px-8">
         <div class="border border-body dark:border-stroke rounded-4xl p-8 flex flex-col lg:flex-row justify-between lg:items-center">
-          <img :src="logoImg" alt="a11yng" class="mb-16 w-7/10 lg:w-[unset]" />
+          <img :src="logoImg" alt="Accessibility Nigeria" class="mb-16 w-7/10 lg:w-[unset]" />
           <UFooterColumns 
             :columns="columns"
             :ui="{ 
@@ -101,11 +72,12 @@ const columns = [
     </template>
 
     <template #left>
-      <p class="text-base">© {{ new Date().getFullYear() }} AccessibilityNigeria. All rights reserved.</p>
+      <p class="text-base">© {{ new Date().getFullYear() }} Accessibility Nigeria. All rights reserved.</p>
     </template>
 
     <template #right>
       <UNavigationMenu
+        v-if="items.length"
         :items="items"
         variant="link"
         :ui="{ 
