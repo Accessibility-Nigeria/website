@@ -60,10 +60,10 @@ const items = [
     <UNavigationMenu :items="items" variant="link" :ui="{ link: 'text-body font-normal hover:text-dark dark:text-white hover:dark:text-gray-300 data-[state=open]:text-dark' }" />
 
     <template #right>
-      <div class="hidden md:flex items-center">
+      <div class="flex items-center">
         <ClientOnly v-if="!colorMode?.forced">
           <UButton
-            :icon="isDark ? 'i-lucide-moon' : 'i-lucide-sun'"
+            :icon="isDark ? 'i-lucide-sun' : 'i-lucide-moon'"
             color="secondary"
             variant="ghost"
             :aria-label="`Switch to ${isDark ? 'light' : 'dark'} mode`"
@@ -71,7 +71,7 @@ const items = [
             class="mr-3"
           />
         </ClientOnly>
-        <UButton to="/partner" color="secondary" variant="solid" label="Partner With Us!!" />
+        <UButton to="/partner" color="secondary" variant="solid" label="Partner With Us!!" class="hidden md:inline-flex" />
       </div>
     </template>
 

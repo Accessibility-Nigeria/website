@@ -11,7 +11,7 @@ const featuredStat = {
 }
 
 const pinkStat = {
-  value: '2018',
+  value: '2024',
   description: 'We published an accessible digital copy of the Nigeria Disability Act—replacing scanned PDFs that screen reader users could not access.'
 }
 

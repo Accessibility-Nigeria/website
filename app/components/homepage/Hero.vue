@@ -6,11 +6,11 @@ import eventPartner from '~/assets/images/event-partner-presentation.jpg'
 import communityWorkshop from '~/assets/images/community-silent-workshop.jpg'
 
 const items = [
-  { src: breakingBarriersBanner, alt: 'Accessibility Nigeria team member with community partner at Breaking Barriers Together event' },
-  { src: eventWorkshop, alt: 'Accessibility workshop presentation with audience' },
   { src: communityGroup, alt: 'Accessibility Nigeria community group at an event' },
+  { src: eventWorkshop, alt: 'Accessibility workshop presentation with audience' },
   { src: eventPartner, alt: 'Accessibility Nigeria partner presentation at CHAOSScon Africa' },
   { src: communityWorkshop, alt: 'Community workshop session with participants' },
+  { src: breakingBarriersBanner, alt: 'Accessibility Nigeria team member with community partner at Breaking Barriers Together event' },
 ]
 </script>
 

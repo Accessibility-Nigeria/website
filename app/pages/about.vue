@@ -46,13 +46,13 @@ const visionArray = [
 const theTeam = [
   {
     name: 'Victoria Ottah (Toria)',
-    position: 'Frontline Safety and Accessibility Professional',
+    position: 'Co-founder and Accessibility Professional',
     bio: 'Victoria Ottah is a multidisciplinary technologist, pioneering author, open-source maintainer, and frontline safety professional driving Equity, Diversity, Inclusion, and Accessibility (EDIA) across digital and industrial ecosystems. She is the co-founder and lead of Accessibility Nigeria, bridging the digital divide for people with disabilities, and co-author of the first book on digital ethical accessibility, establishing foundational frameworks that unite ethical responsibility, human rights, and inclusive design.\n\nVictoria serves as a Board Member and Accessibility Lead at CHAOSS, embedding W3C/WCAG standards into open-source governance. As a Women Techmakers Ambassador and member of the Sub-Advisory Council, she champions pathways for women in STEM through mentorship, policy advocacy, and community building.\n\nAdding a rare operational dimension to her technical profile, Victoria serves as a Fireman in natural gas and energy operations, strictly adhering to ISO safety and risk management standards. Her frontline work in hazard containment, emergency response, and risk mitigation brings a deep understanding of human factors, crisis management, and system resilience under pressure. Coupled with her background in User Experience (UX) design, she seamlessly connects physical industrial safety with intuitive, accessible software architecture.',
     image: teamVictoria
   },
   {
     name: 'Abdulqudus Abubakre',
-    position: 'Co-Founder & Front-end Developer',
+    position: 'Co-founder & Front-end Developer',
     bio: 'Abdulqudus Abubakre is a Senior Frontend Developer and the co-founder of Accessibility Nigeria. He is passionate about building inclusive digital experiences and advocates for accessibility as a fundamental part of creating quality products.\n\nHe leads initiatives that promote accessibility awareness through community events, workshops, mentorship, and collaborations with the wider tech ecosystem. His goal is to help make accessibility knowledge more accessible and inspire individuals and organizations to build technology that works for everyone.',
     image: teamAbdulqudus
   },
@@ -64,13 +64,13 @@ const theTeam = [
   },
   {
     name: 'Ejiro Ogenekome',
-    position: 'UX Designer',
+    position: 'Cybersecurity professional',
     bio: 'Ejiro is a cybersecurity professional and open-source advocate passionate about open-source security, cloud technologies, and digital resilience with experience in UI/UX design. She is interested in inclusive technologies, cybersecurity research, open-source security, and advancing security awareness across the African tech ecosystem while building practical expertise in real-world security solutions.',
     image: teamEjiro
   },
   {
     name: 'Khadija Ladan',
-    position: 'Social Media',
+    position: 'Frontend Developer',
     bio: 'Khadija is a frontend developer dedicated to building impactful web applications with a focus on accessibility. She is passionate about empowering others in tech and has actively contributed to the community, including serving as a former chapter lead for SCA Minna. Khadija balances her technical side with creative outlets like reading, writing, and crocheting.',
     image: teamKhadija
   },
